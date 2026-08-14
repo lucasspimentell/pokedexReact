@@ -1,0 +1,265 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+
+}
+
+:root {
+    --fire: red;
+}
+
+.titulo{
+    margin-top: 20px;
+    
+}
+
+html{
+    min-height: 100vh; 
+    background-image: linear-gradient(#96e3e8,#89e0e8,#3ccee9);
+}
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    min-width: 365px;
+    margin: auto;
+    text-align: center;
+    background-image: linear-gradient(#96e3e8,#89e0e8,#3ccee9);
+    
+   
+
+}
+
+form {
+    padding: 5px;
+}
+
+.pokemon {
+    border: solid 2px blue;
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon strong {
+    width: 90%;
+    background-color: aqua;
+
+}
+
+
+
+.nameId {
+    width: 100%;
+    height: 30%;
+    border: solid 2px rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.imgPoke {
+    
+    
+}
+
+.pokeNome {
+    text-align: start;
+
+}
+
+.pokeId {
+    text-align: end;
+}
+
+.pokeContainer {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+}
+
+.pokemons {
+    flex-wrap: wrap;
+    width: 40%;
+    height: 190px;
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #a4e5ed;
+    background-image: url('fundo.png');
+    background-size: 160px;
+    background-repeat: no-repeat;
+    background-position: 80px -10px;
+    border: solid 1px #ffffff7b;
+    box-shadow: 0px 0px 5px #ffffff57;
+    
+
+}
+
+.pokeBtn {
+    display: grid;
+    grid-template-columns: 2fr 1fr ;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+   
+    border: none;
+    background: radial-gradient(circle,rgba(0, 0, 0, 0.208),rgba(0, 0, 255, 0),rgba(0, 0, 255, 0),rgba(0, 0, 255, 0));
+    background-position: -20px -20px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    
+}
+
+
+
+
+
+.idpoke{
+    width: 90%;
+    height: 90%;
+    font-size: 22px;
+    padding-top:10px ;
+    color: #4d8c98;
+    
+}
+
+.namepoke{
+    font-size: 17px;
+    color: #4d8c98;
+    
+   
+    width: 100%;
+}
+
+
+
+.pokeBtn img {
+  
+ 
+}
+
+
+
+
+.lupaContainer{
+    background-color: rgb(254, 254, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: auto;
+    height: 30px;
+    border: solid 1px #4d8c98;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+.lupaContainer input{
+ padding: 2px;
+ border: none;
+ background-color: rgba(0, 255, 255, 0);
+ outline: none;
+}
+
+.lupaContainer button{
+    background-color: rgba(252, 252, 252, 0);
+    border: none;
+    margin-left: 5px;
+
+}
+
+.banner{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 15px;
+    background-color: #05c7f8e0;
+    
+}
+
+.esconder{
+    display: none;
+}
+
+/* pokemon selecionado */
+
+.pokemonsBusca{
+    flex-wrap: wrap;
+    width: 40%;
+    max-width: 200px;
+    height: 190px;
+    display: flex;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(222, 231, 231, 0.581);
+    background-image: url('fundo.png');
+    background-size: 160px;
+    background-repeat: no-repeat;
+    background-position: 100px -10px;
+    padding: 10px;
+    border: solid 1px #ffffff7b;
+    box-shadow: 0px 0px 5px #ffffff57;
+}
+
+.pokeBusca{
+    
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(115, 197, 238);
+    border: none;
+    background: radial-gradient(circle,rgba(0, 0, 0, 0.208),rgba(0, 0, 255, 0),rgba(0, 0, 255, 0),rgba(0, 0, 255, 0));
+    background-position: -20px -20px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+.btnvoltar{
+    
+    padding: 20px;
+    position: absolute;
+    top: 370px;
+    left: 50px;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    background-color: #028bb7;
+    font-size: 16px;
+    color: aliceblue;
+    font-weight: bolder;
+    border: none;
+}
+
+.btnCarregar{
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    background-color: #028bb7;
+    font-size: 16px;
+    color: aliceblue;
+    font-weight: bolder;
+    border: none;
+}

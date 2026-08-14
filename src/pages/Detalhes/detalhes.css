@@ -1,0 +1,150 @@
+
+.detalhesConteiner{
+    background-color: aliceblue;
+
+}
+
+
+
+.pokemonDetalhes{
+    
+    height: 300px;
+    display: flex;
+    background-image: url("fundo.png");
+    background-size: 200px;
+    background-position: 250px 140px;
+    background-repeat: no-repeat;
+   
+}
+
+.imgPokeDetalhes{
+   
+    flex: 1;
+    display: flex;
+    align-items: center;
+    
+}
+
+.imgPokeDetalhes img{
+    
+    width: 150px;
+    
+}
+
+.nameIdDetalhes{
+   
+    width: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    
+    
+}
+
+.nameIdDetalhes strong{
+    text-align: start;
+}
+.tipos{
+    display: flex;
+    gap: 5px;
+}
+.tipoPoke{
+    
+
+    background-color: rgba(234, 234, 242, 0.674);
+    border-radius: 10px;
+    padding: 5px;
+    color: rgba(0, 0, 0, 0.564);
+}
+
+.pokeId{
+    font-size: 20px;
+    color: rgba(240, 248, 255, 0.751);
+}
+
+.pokeNome{
+    font-size: 2.6rem;
+    word-break:break-all ;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: rgba(240, 248, 255, 0.751);
+}
+
+.voltarHome{
+    padding: 5px;
+    position: absolute;
+    margin: 10px;
+}
+
+
+.normal{
+    background-color: #A8A77A;
+}
+.water{
+    background-color: #6390F0;
+}
+.grass{
+    background-color: aquamarine;
+}
+
+.fire{
+    background-color: #EE8130;
+}
+
+.electric{
+    background-color: #F7D02C;
+}
+
+.ice{
+    background-color: #96D9D6;
+}
+
+.fighting{
+    background-color: #C22E28;
+}
+
+.posion{
+    background-color: #A33EA1;
+}
+
+.ground{
+    background-color:  #E2BF65;
+}
+
+.flying{
+    background-color:  #A98FF3;
+}
+
+.psychic{
+background-color:   #F95587;
+}
+
+.bug{
+background-color:  #A6B91A;
+}
+
+.rock{
+background-color:  #B6A136;
+}
+
+.ghost{
+background-color:   #735797;
+}
+
+.dragon{
+background-color:  #6F35FC;
+}
+
+.dark{
+background-color:  #705746;
+}
+
+.steel{
+background-color:  #B7B7CE;
+}
+
+.fairy{
+background-color:  #D685AD;
+}
