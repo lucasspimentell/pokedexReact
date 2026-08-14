@@ -9,7 +9,7 @@ const Detalhes = () =>{
     const location = useLocation();
     const [tipoPoke,setTipoPoke] = useState("");
     const pokemon = location.state?.pokemonAtual;
-
+    const [total,setTotal]=useState([])
     const[poke,setPoke] = useState(pokemon.name);
     const [pokemonObj,setPokemonObj] = useState([]);
 
@@ -48,7 +48,7 @@ async function carregarPokemon() {
                 return(
 
                     <div key={pokeId} className={ `pokemonDetalhes ${item.types[0].type.name}`}  >
-                        <button className="voltarHome"><Link to='/'>{"Voltar"}</Link></button>
+                        <button className="voltarHome"><Link to='/'><img src="/seta-esquerda.png" alt="" /></Link></button>
             <div className="nameIdDetalhes">
 
             <strong className="pokeId">{"#"+pokeId}</strong>    
@@ -75,7 +75,44 @@ async function carregarPokemon() {
             </div> 
                 )
             })}
-           
+
+           {pokemonObj.map((itemStatus)=>{
+
+            return(
+           <div className="statusPoke">
+            <h4 className={`statusTitulo ${itemStatus.types[0].type.name}`}>Base Status</h4>
+            <div className="statusName">
+            {console.log(itemStatus.stats[0].stat)}
+            {console.log(itemStatus.stats[0].base_stat)}    
+            {itemStatus.stats.map((statu,i)=>{
+
+                
+
+                
+                
+
+               
+
+                return(
+                
+                  <div key={i} className="statuName">
+                    <div className="conteudoStatus">
+                        <strong>{statu.stat.name} </strong> 
+                    <p>{statu.base_stat}</p>
+                    <progress value={statu.base_stat} max={100}></progress>
+                    
+                    </div>
+                    
+                  </div>
+                
+                )
+
+                
+            })}   
+                
+                </div>
+           </div>)
+        })}
             
         </div>
         

@@ -160,7 +160,7 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 50%;
     margin: auto;
     height: 30px;
     border: solid 1px #4d8c98;
@@ -170,6 +170,7 @@ form {
 
 }
 .lupaContainer input{
+ width: 80%;   
  padding: 2px;
  border: none;
  background-color: rgba(0, 255, 255, 0);
