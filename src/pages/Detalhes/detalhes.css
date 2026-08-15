@@ -3,8 +3,8 @@
     color: #A8A77A;
 }
 .water{
-    background-color: #6390F0;
-    color: #6390F0;
+    background-color: #6390f0e1;
+    color: #6390f0e1;
 }
 .grass{
     background-color: #7AC74C;
@@ -31,7 +31,7 @@
     color: #C22E28;
 }
 
-.posion{
+.poison{
     background-color: #A33EA1;
     color: #A33EA1;
 }
@@ -95,7 +95,10 @@ color: #D685AD;
 
 
 .detalhesConteiner{
-    background-color: aliceblue;
+    background-color: #fff;
+     max-width: 500px;
+    min-width: 365px;
+    margin: auto;
 
 }
 
@@ -183,14 +186,16 @@ color: #D685AD;
 }
 
 .statusPoke{
-    width: 100%;
+    width: 95%;
     height: 100vh;
-    background-color: #f5f6f5;
+    
+    margin: auto;
 }
 
 .statusTitulo{
     display: flex;
     background-color: #ffffff00;
+    padding: 10px;
 }
 
 .statusName{
@@ -200,17 +205,59 @@ color: #D685AD;
 }
 
 .statuName{
+    padding: 10px;
     
 }
 
 .conteudoStatus{
     display: grid;
     grid-template-columns: 2fr 1fr 3fr;
+    background-color: #fff;
+    
+}
+
+.statuNumber{
+    text-align: center;
+}
+
+.hp{
+    
+ accent-color:#026a28;   
+padding: 10px;
+
+    
+}
+
+.attack{
+    accent-color: red;
+    padding: 10px;
+}
+
+.defense{
+    padding: 10px;
+}
+
+.special-attack{
+    accent-color: rgb(142, 142, 3);
+    padding: 10px;
+}
+
+.special-defense{
+    accent-color: #3d06d5;
+    padding: 10px;
+}
+
+.speed{
+    accent-color:#5f010d ;
+    padding: 10px;
+    
     
 }
 
 
-
+.totalName{
+    
+}
 
 
 

@@ -81,6 +81,7 @@ async function carregarPokemon() {
             return(
            <div className="statusPoke">
             <h4 className={`statusTitulo ${itemStatus.types[0].type.name}`}>Base Status</h4>
+
             <div className="statusName">
             {console.log(itemStatus.stats[0].stat)}
             {console.log(itemStatus.stats[0].base_stat)}    
@@ -98,8 +99,8 @@ async function carregarPokemon() {
                   <div key={i} className="statuName">
                     <div className="conteudoStatus">
                         <strong>{statu.stat.name} </strong> 
-                    <p>{statu.base_stat}</p>
-                    <progress value={statu.base_stat} max={100}></progress>
+                    <p className="statuNumber">{statu.base_stat}</p>
+                    <progress className={`${statu.stat.name}`} value={statu.base_stat} max={100}></progress>
                     
                     </div>
                     
@@ -111,9 +112,15 @@ async function carregarPokemon() {
             })}   
                 
                 </div>
+                {/* <div className="statuName">
+                <div className="conteudoStatus">
+
+                <strong className="totalName">Total</strong>
+                <p className="statuNumber totalValor">10</p>
+                </div>
+                </div> */}
            </div>)
         })}
-            
         </div>
         
     )
