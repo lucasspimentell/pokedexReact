@@ -74,6 +74,7 @@ form {
 
 .pokeId {
     text-align: end;
+    
 }
 
 .pokeContainer {
@@ -123,16 +124,17 @@ form {
 
 .imgPoke {
   
-    max-width: 124px;
+    max-width: 110px;
     
 }
 
 
 
 .idpoke{
-    width: 90%;
+   
+    width: 100%;
     height: 90%;
-    font-size: 22px;
+    font-size: 1rem;
     padding-top:10px ;
     color: #4d8c98;
     
