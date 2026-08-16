@@ -2,7 +2,7 @@ import { useState,useEffect } from "react";
 import { Link,useLocation} from "react-router-dom";
 import api from "../../services/api";
 import "./detalhes.css"
-
+import { toast } from 'react-toastify';
 
 const Detalhes = () =>{
     
@@ -12,8 +12,17 @@ const Detalhes = () =>{
     const [total,setTotal]=useState([])
     const[poke,setPoke] = useState(pokemon.name);
     const [pokemonObj,setPokemonObj] = useState([]);
+    const [favorito,setFavorito] =useState(JSON.parse(localStorage.getItem("@pokeSalvo")) || []);
+    const [salvo,setSalvo]=useState(false);
 
     useEffect(()=>{
+         localStorage.setItem("@pokeSalvo",JSON.stringify(favorito))
+
+        
+
+        
+
+         
         
 async function carregarPokemon() {
         try {
@@ -33,21 +42,50 @@ async function carregarPokemon() {
         
      
 
-    },[])
+    },[favorito])
 
+        const favoritar =(pokemon)=>{
+        console.log(pokemon)
+        setSalvo(!salvo)
+       
+
+        let hasPoke = favorito.some(favorito => favorito.id === pokemon.id)
+
+        if (hasPoke) {
+            console.log("já existe na lista")
+            toast.warning("já existe na lista")
+            return
+        }
+
+        
+       
+       
+        setFavorito([...favorito, pokemon])
+
+        toast.success("Adicionado aos favoritos!")
+        console.log("adicionado")
+            
+    }
+    console.log(favorito)
 
     return(
         <div className="detalhesConteiner">
            
             {console.log(pokemonObj)}
             {pokemonObj.map((item)=>{
-                 
+                
+                
+                
                 const pokeId = item.id
                 const spritUrl = 
                 `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokeId}.svg`
                 return(
-
+                    
                     <div key={pokeId} className={ `pokemonDetalhes ${item.types[0].type.name}`}  >
+                        
+                        <button className="add" onClick={()=>favoritar(item)}>{salvo ?<img src="marca.png" alt="" width="18px"/> :<img src="marca-paginas.png" alt="" />}</button>
+
+
                         <button className="voltarHome"><Link to='/'><img src="/seta-esquerda.png" alt="" /></Link></button>
             <div className="nameIdDetalhes">
 
@@ -79,8 +117,8 @@ async function carregarPokemon() {
            {pokemonObj.map((itemStatus)=>{
 
             return(
-           <div className="statusPoke">
-            <h4 className={`statusTitulo ${itemStatus.types[0].type.name}`}>Base Status</h4>
+           <div className="statusPoke" key={itemStatus.name}>
+            <h4 className={`statusTitulo ${itemStatus.types[0].type.name}`}>Base Status </h4>
 
             <div className="statusName">
             {console.log(itemStatus.stats[0].stat)}

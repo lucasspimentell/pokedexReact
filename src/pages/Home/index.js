@@ -109,6 +109,7 @@ const Home = () => {
                 <img src="pokebola.png" alt="pokebola" width="50px" height="50px"/>
                 <h1 className="titulo">Pokédex</h1>
                     <img src="pikachu.png" alt="celular pokemon" width="50px" height="50px"/>
+                     <button className="add"><Link to="/Favoritos"><img src="marca.png" alt="" width="16px"/></Link></button>
                 </div>
 
                 <form onSubmit={buscar}>
@@ -146,6 +147,9 @@ const Home = () => {
 
                         return (
                             <div key={pokeId} className="pokemons">
+
+                                
+
                                 <Link to='/Detalhes' state={{ pokemonAtual: item2 }} className="pokeBtn">
                                 
                                     <img src={spritUrl} alt={item2.name} className="imgPoke" />

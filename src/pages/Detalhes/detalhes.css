@@ -259,6 +259,15 @@ padding: 10px;
     
 }
 
+.add{
+    position: absolute;
+    top: -3px;
+    left: 90%;
+    background-color: #026a2800;
+   border: none;
+    filter: invert();
+}
+
 
 
 

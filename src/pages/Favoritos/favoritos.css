@@ -1,0 +1,46 @@
+
+.containerFav{
+
+
+width: 70%;
+flex-wrap: wrap;
+margin: auto;
+padding-top: 50px;
+
+}
+.favoritosCont{
+    
+   
+    text-align: center;
+    margin-top: 40px;
+
+    
+}
+
+.remove{
+    font-weight: bold;
+    padding: 2px 5px;
+    margin-left: 100%;
+    background-color: tomato;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.favoritosCont a{
+    display: flex;
+    height: 120px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: darkcyan;
+    background: radial-gradient(circle,rgba(4, 157, 222, 0.712),rgba(0, 0, 255, 0),rgba(0, 0, 255, 0),rgba(0, 179, 255, 0));
+    background-position: -0px -9px;
+    background-repeat: no-repeat;
+    gap: 25px;
+   
+    
+}
+
