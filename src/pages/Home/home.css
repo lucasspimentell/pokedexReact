@@ -66,14 +66,10 @@ form {
     justify-content: center;
 }
 
-.imgPoke {
-    
-    
-}
 
 .pokeNome {
     text-align: start;
-
+    
 }
 
 .pokeId {
@@ -104,7 +100,7 @@ form {
     border: solid 1px #ffffff7b;
     box-shadow: 0px 0px 5px #ffffff57;
     
-
+    
 }
 
 .pokeBtn {
@@ -125,6 +121,11 @@ form {
 }
 
 
+.imgPoke {
+  
+    max-width: 124px;
+    
+}
 
 
 
@@ -192,7 +193,7 @@ form {
     padding-top: 10px;
     padding-bottom: 10px;
     gap: 15px;
-    background-color: #05c7f8e0;
+    background-color: #028bb7;
     
 }
 
